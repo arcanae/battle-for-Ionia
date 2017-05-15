@@ -3,8 +3,39 @@
 }
 
 body {
-    height: 100vh;
     width: 100vw;
+    height: 100%;
+    background-color: black;
+    background-repeat: repeat;
+    overflow: hidden;
+}
+
+#charac {
+    position: absolute;
+    top: 5vh;
+    left: 33vw;
+    height: 12vh;
+}
+
+#xayah-load {
+    height: 37vh;
+    position: absolute;
+    top: 20vh;
+    left: 27vw;
+}
+
+#rakan-load {
+    height: 37vh;
+    position: absolute;
+    top: 20vh;
+    left: 60vw;
+}
+
+#battle {
+    position: absolute;
+    left: 7vw;
+    top: 60vh;
+    height: 40vh;
 }
 
 main {

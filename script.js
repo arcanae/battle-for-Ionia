@@ -14,6 +14,7 @@ function doubleDagger(use, take) {
     } else {
         use.mp -= 20;
         take.hp -= 20;
+        use.hp += 10;
 
         if (take.hp < 0) {
             take.hp = 0;
