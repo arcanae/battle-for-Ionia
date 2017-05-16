@@ -25,28 +25,64 @@ main {
     height: 53vh;
     width: 53vw;
     display: flex;
+    flex-wrap: wrap;
+}
+
+#topleft {
+    width: 60%;
+    height: 50%;
+}
+
+#topright {
+    width: 40%;
+    height: 50%;
+}
+
+#botleft {
+    width: 40%;
+    height: 50%;
+}
+
+#botright {
+    width: 60%;
+    height: 50%;
+    display: flex;
     justify-content: flex-end;
     align-items: flex-end;
 }
 
 #xayah {
     height: 20vh;
-    position: absolute;
+    /*position: absolute;
     top: 57vh;
-    left: 20vw;
+    left: 20vw;*/
 }
 
 #rakan {
     height: 16vh;
-    position: absolute;
+    /*position: absolute;
     top: 25vh;
-    left: 61vw;
+    left: 61vw;*/
+}
+
+#xayahpic {
+    height: 13vh;
+    /*position: absolute;
+    top: 63.5vh;
+    left: 35vw;*/
+}
+
+#rakanpic {
+    height: 13vh;
+    /*position: absolute;
+    top: 23.5vh;
+    left: 54vw;*/
 }
 
 nav {
     background-color: grey;
-    width: 30%;
-    height: 25%;
+    width: 45%;
+    height: 50%;
 }
 
 nav>ul {
