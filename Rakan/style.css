@@ -14,15 +14,41 @@ body {
     background-repeat: no-repeat;
 }
 
-header {
-    display: none;
-}
-
 main {
     background-image: url("../img/gameback.jpg");
     background-size: 100%;
     height: 53vh;
     width: 53vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#topleft {
+    width: 60%;
+    height: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#topright {
+    width: 40%;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#botleft {
+    width: 40%;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#botright {
+    width: 60%;
+    height: 50%;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
@@ -30,22 +56,125 @@ main {
 
 #xayah {
     height: 20vh;
-    position: absolute;
-    top: 23vh;
-    left: 62vw;
+    margin: 5% 10% 0 0;
+    /*position: absolute;
+    top: 57vh;
+    left: 20vw;*/
 }
 
 #rakan {
-    height: 18vh;
-    position: absolute;
-    top: 58vh;
-    left: 17.5vw;
+    margin-left: 9%;
+    height: 70%;
+    /*position: absolute;
+    top: 25vh;
+    left: 61vw;*/
+}
+
+#xayahpic {
+    height: 50%;
+    /*position: absolute;
+    top: 63.5vh;
+    left: 35vw;*/
+}
+
+#rakanpic {
+    height: 50%;
+    /*position: absolute;
+    top: 23.5vh;
+    left: 54vw;*/
+}
+
+#hpxayah {
+    background-color: transparent;
+    width: 55%;
+    height: 50%;
+}
+
+#contxayahhpbar {
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#xayahhpbar {
+    background-color: red;
+    width: 96%;
+    height: 50%;
+    margin-right: 2%;
+}
+
+#xayahhptext {
+    height: 25%;
+    margin-left: 4%;
+}
+
+#contxayahmpbar {
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#xayahmpbar {
+    background-color: blue;
+    width: 96%;
+    height: 50%;
+    margin-right: 2%;
+}
+
+#xayahmptext {
+    height: 25%;
+    margin-left: 4%;
+}
+
+#hprakan {
+    width: 55%;
+    height: 50%;
+}
+
+#contrakanhpbar {
+    height: 25%;
+    display: flex;
+    align-items: center;
+}
+
+#rakanhpbar {
+    background-color: red;
+    width: 96%;
+    height: 50%;
+    margin-left: 2%;
+}
+
+#rakanhptext {
+    height: 25%;
+    text-align: end;
+    margin-right: 4%;
+}
+
+#contrakanmpbar {
+    height: 25%;
+    display: flex;
+    align-items: center;
+}
+
+#rakanmpbar {
+    background-color: blue;
+    width: 96%;
+    height: 50%;
+    margin-left: 2%;
+}
+
+#rakanmptext {
+    height: 25%;
+    text-align: end;
+    margin-right: 4%;
 }
 
 nav {
     background-color: grey;
-    width: 30%;
-    height: 25%;
+    width: 45%;
+    height: 50%;
 }
 
 nav>ul {
