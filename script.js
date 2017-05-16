@@ -1,6 +1,6 @@
 let xayahLoad = document.querySelector("#xayah-load");
 xayahLoad.addEventListener("click", function() {
-    location.href = "xayah/index.html";
+    location.href = "Xayah/index.html";
 });
 
 xayahLoad.addEventListener("mouseover", function() {
@@ -14,7 +14,7 @@ xayahLoad.addEventListener("mouseout", function() {
 
 let rakanLoad = document.querySelector("#rakan-load");
 rakanLoad.addEventListener("click", function() {
-    location.href = "rakan/index.html";
+    location.href = "Rakan/index.html";
 });
 
 rakanLoad.addEventListener("mouseover", function() {
