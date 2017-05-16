@@ -1,9 +1,9 @@
-let player = {
+let xayah = {
     hp: 100,
     mp: 100
 };
 
-let enemy = {
+let rakan = {
     hp: 100,
     mp: 100
 };
@@ -12,10 +12,16 @@ let enemy = {
 
 function healthPot(use) {
     use.hp += 30;
+    if (use.hp > 100) {
+        use.hp = 100;
+    }
 }
 
 function manaPot(use) {
     use.mp += 30;
+    if (use.mp > 100) {
+        use.mp = 100;
+    }
 }
 
 // Xayah's skills
@@ -139,6 +145,30 @@ function quickness(use, take) {
             use.hp = 100;
         }
     }
+}
+
+// Display
+
+function display() {
+    let rakanHptext = document.querySelector("#rakanhptext");
+    let rakanMptext = document.querySelector("#rakanmptext");
+    let xayahHptext = document.querySelector("#xayahhptext");
+    let xayahMptext = document.querySelector("#xayahmptext");
+
+    rakan.mp += 10;
+    xayah.mp += 10;
+
+    if (rakan.mp > 100) {
+        rakan.mp = 100;
+    }
+    if (xayah.mp > 100) {
+        xayah.mp = 100;
+    }
+
+    rakanHptext.textContent = "HP: " + rakan.hp + " / 100";
+    rakanMptext.textContent = "MP: " + rakan.mp + " / 100";
+    xayahHptext.textContent = "HP: " + xayah.hp + " / 100";
+    xayahMptext.textContent = "MP: " + xayah.mp + " / 100";
 }
 
 let menuXayah1 = document.querySelector("#menuXayah1");
