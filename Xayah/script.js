@@ -171,6 +171,8 @@ function display() {
     xayahMptext.textContent = "MP: " + xayah.mp + " / 100";
 }
 
+// Event
+
 let menuXayah1 = document.querySelector("#menuXayah1");
 menuXayah1.addEventListener("click", function() {
     let menu = document.querySelector("#menuXayah");
@@ -178,6 +180,24 @@ menuXayah1.addEventListener("click", function() {
     menu.style.display = "none";
     skills.style.display = "flex";
 });
+
+let skills = document.querySelector("#skills");
+let bulean1 = false;
+skills.addEventListener("mouseover", function() {
+    bulean1 = true;
+});
+skills.addEventListener("mouseout", function() {
+    bulean1 = false;
+});
+skills.addEventListener("keypress", function() {
+    if (event.key == "a" && bulean1 == true) {
+        let menu = document.querySelector("#menuXayah");
+        menu.style.display = "flex";
+        skills.style.display = "none";
+    }
+});
+
+
 
 let menuXayah2 = document.querySelector("#menuXayah2");
 menuXayah2.addEventListener("click", function() {
