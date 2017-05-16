@@ -151,7 +151,7 @@ menuRakan1.addEventListener("click", function() {
 
 let menuRakan2 = document.querySelector("#menuRakan2");
 menuRakan2.addEventListener("click", function() {
-    let menu = document.querySelector("#menu");
+    let menu = document.querySelector("#menuRakan");
     let items = document.querySelector("#items");
     menu.style.display = "none";
     items.style.display = "flex";

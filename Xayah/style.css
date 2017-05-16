@@ -62,13 +62,12 @@ nav>ul {
 #items {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 nav>ul>li,
 #skills>div>li {
     list-style: none;
-    margin: 0 10%;
 }
 
 nav>ul>li:hover,

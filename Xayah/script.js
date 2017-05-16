@@ -151,7 +151,7 @@ menuXayah1.addEventListener("click", function() {
 
 let menuXayah2 = document.querySelector("#menuXayah2");
 menuXayah2.addEventListener("click", function() {
-    let menu = document.querySelector("#menu");
+    let menu = document.querySelector("#menuXayah");
     let items = document.querySelector("#items");
     menu.style.display = "none";
     items.style.display = "flex";
