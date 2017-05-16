@@ -22,8 +22,8 @@ main {
     background-image: url("../img/gameback.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
-    height: 53vh;
-    width: 53vw;
+    height: 53%;
+    width: 53%;
     display: flex;
     flex-wrap: wrap;
 }
@@ -31,16 +31,24 @@ main {
 #topleft {
     width: 60%;
     height: 50%;
+    display: flex;
+    justify-content: flex-end;
 }
 
 #topright {
     width: 40%;
     height: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 #botleft {
     width: 40%;
     height: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
 }
 
 #botright {
@@ -53,30 +61,114 @@ main {
 
 #xayah {
     height: 20vh;
+    margin-left: 6%;
     /*position: absolute;
     top: 57vh;
     left: 20vw;*/
 }
 
 #rakan {
-    height: 16vh;
+    height: 70%;
+    margin: 5% 6% 0 0;
     /*position: absolute;
     top: 25vh;
     left: 61vw;*/
 }
 
 #xayahpic {
-    height: 13vh;
+    height: 50%;
     /*position: absolute;
     top: 63.5vh;
     left: 35vw;*/
 }
 
 #rakanpic {
-    height: 13vh;
+    height: 50%;
     /*position: absolute;
     top: 23.5vh;
     left: 54vw;*/
+}
+
+#hpxayah {
+    background-color: transparent;
+    width: 55%;
+    height: 50%;
+}
+
+#contxayahhpbar {
+    height: 25%;
+    display: flex;
+    align-items: center;
+}
+
+#xayahhpbar {
+    background-color: red;
+    width: 96%;
+    height: 50%;
+    margin-left: 2%;
+}
+
+#xayahhptext {
+    height: 25%;
+    text-align: end;
+    margin-right: 4%;
+}
+
+#contxayahmpbar {
+    height: 25%;
+    display: flex;
+    align-items: center;
+}
+
+#xayahmpbar {
+    background-color: blue;
+    width: 96%;
+    height: 50%;
+    margin-left: 2%;
+}
+
+#xayahmptext {
+    height: 25%;
+    text-align: end;
+    margin-right: 4%;
+    font-size: 100%;
+}
+
+#hprakan {
+    width: 55%;
+    height: 50%;
+}
+
+#contrakanhpbar {
+    height: 25%;
+    display: flex;
+    align-items: center;
+}
+
+#rakanhpbar {
+    background-color: red;
+    width: 96%;
+    height: 50%;
+}
+
+#rakanhptext {
+    height: 25%;
+}
+
+#contrakanmpbar {
+    height: 25%;
+    display: flex;
+    align-items: center;
+}
+
+#rakanmpbar {
+    background-color: blue;
+    width: 96%;
+    height: 50%;
+}
+
+#rakanmptext {
+    height: 25%;
 }
 
 nav {
