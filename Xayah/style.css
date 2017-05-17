@@ -90,7 +90,7 @@ main {
 }
 
 #hpxayah {
-    background-color: transparent;
+    background-color: rgba(155, 13, 73, 0.4);
     width: 45%;
     height: 50%;
 }
@@ -155,6 +155,7 @@ main {
 #hprakan {
     width: 45%;
     height: 50%;
+    background-color: rgba(158, 58, 60, 0.5);
 }
 
 #contrakanhpbar {
@@ -196,7 +197,6 @@ main {
 }
 
 nav {
-    background-color: grey;
     width: 55%;
     height: 60%;
 }
@@ -249,6 +249,13 @@ nav>ul {
     align-items: flex-end;
 }
 
+#menuXayah {
+    background-image: url("../img/Xayah.0.png");
+    background-size: 100%;
+    color: pink;
+    text-shadow: 0vh 0vh 0.1vh black;
+}
+
 #menuXayah,
 #items {
     display: flex;
@@ -276,7 +283,7 @@ nav>ul {
 }
 
 #skills>div>div>div>p {
-    font-size: 1.7vh;
+    font-size: 1.6vh;
 }
 
 #menuXayah>div:hover,
@@ -293,11 +300,49 @@ nav>ul {
 
 #skills>div {
     width: 100%;
-    height: 50%;
+    height: 48.5%;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+}
+
+.border {
+    border: 0.1vh solid black;
+}
+
+#border1 {
+    border-bottom: 0.2vh solid black;
+    background-image: url("../img/stripe_violet.png");
+    background-size: 20%;
+}
+
+#border2 {
+    border-bottom: 0.2vh solid black;
+    background-image: url("../img/stripe_green.png");
+    background-size: 20%;
+}
+
+#border3 {
+    border-top: 0.15vh solid black;
+    background-image: url("../img/stripe_violet.png");
+    background-size: 20%;
+}
+
+#border4 {
+    border-top: 0.15vh solid black;
+    background-image: url("../img/stripe_blue.png");
+    background-size: 20%;
 }
 
 #items {
     display: none;
+}
+
+#itemhp {
+    background-image: url("../img/stripe_green.png");
+    background-size: 20%;
+}
+
+#itemmp {
+    background-image: url("../img/stripe_blue.png");
+    background-size: 20%;
 }
