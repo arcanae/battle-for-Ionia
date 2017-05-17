@@ -106,6 +106,8 @@ main {
 #contxayahhpbar>.black,
 #contxayahmpbar>.black {
     margin-right: 2%;
+    display: flex;
+    justify-content: flex-end;
 }
 
 #contrakanhpbar>.black,

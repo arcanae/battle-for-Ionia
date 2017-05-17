@@ -115,6 +115,8 @@ main {
 #contrakanhpbar>.black,
 #contrakanmpbar>.black {
     margin-right: 2%;
+    display: flex;
+    justify-content: flex-end;
 }
 
 #xayahhpbar {
