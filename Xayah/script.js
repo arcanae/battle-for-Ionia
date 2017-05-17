@@ -74,7 +74,7 @@ function featherStorm(use, take) {
     if (use.mp < 70) {
         alert("not enough mana");
     } else {
-        use.mp -= 80;
+        use.mp -= 70;
         take.hp -= 55;
 
         if (take.hp < 0) {

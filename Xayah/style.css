@@ -9,7 +9,7 @@ body {
     height: 100vh;
     width: 100vw;
     background-image: url("../img/xayah-rakan.jpg");
-    background-position: center;
+    background-position: fixed;
     background-size: 100%;
     background-repeat: repeat-y;
 }
@@ -22,8 +22,8 @@ main {
     background-image: url("../img/gameback.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
-    height: 53%;
-    width: 53%;
+    height: 57%;
+    width: 57%;
     display: flex;
     flex-wrap: wrap;
 }
@@ -91,7 +91,7 @@ main {
 
 #hpxayah {
     background-color: transparent;
-    width: 55%;
+    width: 45%;
     height: 50%;
 }
 
@@ -129,6 +129,7 @@ main {
     height: 25%;
     text-align: end;
     margin-right: 4%;
+    font-size: 2.5vh;
 }
 
 #contxayahmpbar {
@@ -147,11 +148,12 @@ main {
     height: 25%;
     text-align: end;
     margin-right: 4%;
-    font-size: 100%;
+    font-size: 2.5vh;
+    ;
 }
 
 #hprakan {
-    width: 55%;
+    width: 45%;
     height: 50%;
 }
 
@@ -171,6 +173,7 @@ main {
 #rakanhptext {
     height: 25%;
     margin-left: 4%;
+    font-size: 2.5vh;
 }
 
 #contrakanmpbar {
@@ -189,12 +192,13 @@ main {
 #rakanmptext {
     height: 25%;
     margin-left: 4%;
+    font-size: 2.5vh;
 }
 
 nav {
     background-color: grey;
-    width: 45%;
-    height: 50%;
+    width: 55%;
+    height: 60%;
 }
 
 nav>ul {
@@ -203,35 +207,95 @@ nav>ul {
     padding-left: 0;
 }
 
+#skills1>div,
+#skills2>div,
+#items>div {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 50%;
+}
+
+.skilltext {
+    height: 65%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.skillef {
+    height: 35%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.itemstext {
+    height: 65%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.itemsef {
+    height: 35%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
 #menuXayah,
 #items {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
 }
 
-nav>ul>li,
-#skills>div>li {
-    list-style: none;
+#menuXayah>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+}
+
+#menuXayah>div>p,
+#items>div>div>pre {
     font-size: 2.5vh;
 }
 
-nav>ul>li:hover,
-#skills>div>li:hover {
+#skills>div>div>div>pre,
+#items>div>div>p {
+    font-size: 2.2vh;
+}
+
+#skills>div>div>div>p {
+    font-size: 1.7vh;
+}
+
+#menuXayah>div:hover,
+#skills>div>div>div:hover,
+#items>div:hover {
     cursor: pointer;
 }
 
 #skills {
     display: none;
-    flex-direction: column;
+    height: 100%;
+    flex-wrap: wrap;
 }
 
 #skills>div {
     width: 100%;
     height: 50%;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    flex-wrap: wrap;
 }
 
 #items {

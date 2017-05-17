@@ -17,8 +17,8 @@ body {
 main {
     background-image: url("../img/gameback.jpg");
     background-size: 100%;
-    height: 53vh;
-    width: 53vw;
+    height: 57%;
+    width: 57%;
     display: flex;
     flex-wrap: wrap;
 }
@@ -86,7 +86,7 @@ main {
 
 #hpxayah {
     background-color: transparent;
-    width: 55%;
+    width: 45%;
     height: 50%;
 }
 
@@ -145,7 +145,7 @@ main {
 }
 
 #hprakan {
-    width: 55%;
+    width: 45%;
     height: 50%;
 }
 
@@ -187,8 +187,8 @@ main {
 
 nav {
     background-color: grey;
-    width: 45%;
-    height: 50%;
+    width: 55%;
+    height: 60%;
 }
 
 nav>ul {
