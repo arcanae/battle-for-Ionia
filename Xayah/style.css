@@ -101,18 +101,26 @@ main {
     align-items: center;
 }
 
-
-/*.black {
+.black {
     background-color: black;
     width: 96%;
     height: 50%;
-}*/
+}
+
+#contxayahhpbar>.black,
+#contxayahmpbar>.black {
+    margin-left: 2%;
+}
+
+#contrakanhpbar>.black,
+#contrakanmpbar>.black {
+    margin-right: 2%;
+}
 
 #xayahhpbar {
     background-color: red;
-    width: 96%;
-    height: 50%;
-    margin-left: 2%;
+    width: 100%;
+    height: 100%;
 }
 
 #xayahhptext {
@@ -129,9 +137,8 @@ main {
 
 #xayahmpbar {
     background-color: blue;
-    width: 96%;
-    height: 50%;
-    margin-left: 2%;
+    width: 100%;
+    height: 100%;
 }
 
 #xayahmptext {
@@ -155,9 +162,8 @@ main {
 
 #rakanhpbar {
     background-color: red;
-    width: 96%;
-    height: 50%;
-    margin-right: 2%;
+    width: 100%;
+    height: 100%;
 }
 
 #rakanhptext {
@@ -174,9 +180,8 @@ main {
 
 #rakanmpbar {
     background-color: blue;
-    width: 96%;
-    height: 50%;
-    margin-right: 2%;
+    width: 100%;
+    height: 100%;
 }
 
 #rakanmptext {
