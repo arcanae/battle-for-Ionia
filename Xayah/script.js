@@ -27,7 +27,7 @@ function manaPot(use) {
 // Xayah's skills
 
 let logs = document.querySelector("#logs");
-logs.textContent += "\n~~~"
+logs.textContent += "\nThere is a 10MP regen at the end of each turn.\nUse \"Space Bar\" to back in menu.\nHave fun playing: Battle for Ionia !\n~~~"
 
 function doubleDagger(use, take) {
     if (use.mp < 20) {
@@ -167,12 +167,12 @@ function battleDance(use, take) {
 }
 
 function quickness(use, take) {
-    if (use.mp < 70) {
+    if (use.mp < 60) {
         enemyAtk(use, take);
     } else {
-        logs.textContent += "\nRakan use The Quickness -35/+35     70";
+        logs.textContent += "\nRakan use The Quickness -35/+35     60";
         logs.scrollTop = logs.scrollHeight;
-        use.mp -= 70;
+        use.mp -= 60;
         take.hp -= 35;
         use.hp += 35;
 
