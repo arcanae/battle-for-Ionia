@@ -1,32 +1,36 @@
 * {
     margin: 0;
+    padding: 0;
 }
 
 body {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     height: 100vh;
     width: 100vw;
     background-image: url("../img/xayah-rakan.jpg");
-    background-position: fixed;
+    background-position: center;
     background-size: 100%;
-    background-repeat: repeat-y;
-}
-
-header {
-    display: none;
+    background-color: rgb(155, 13, 73);
+    background-repeat: no-repeat;
 }
 
 main {
     background-image: url("../img/gameback.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
-    height: 57%;
-    width: 57%;
+    height: 414.3px;
+    width: 750px;
+    min-height: 414.3px;
+    min-width: 750px;
+    /*margin: auto;
+    margin-top: calc(50vh - (414.3px / 2));*/
     display: flex;
     flex-wrap: wrap;
-    border: 0.2vh solid black;
+    border: 2px solid black;
+    box-sizing: border-box;
+    overflow
 }
 
 #topleft {
