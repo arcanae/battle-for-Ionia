@@ -151,7 +151,7 @@ main {
     height: 25%;
     text-align: end;
     margin-right: 4%;
-    font-size: 2.5vh;
+    font-size: 1.5em;
 }
 
 #contxayahmpbar {
@@ -170,7 +170,7 @@ main {
     height: 25%;
     text-align: end;
     margin-right: 4%;
-    font-size: 2.5vh;
+    font-size: 1.5em;
     ;
 }
 
@@ -197,7 +197,7 @@ main {
 #rakanhptext {
     height: 25%;
     margin-left: 4%;
-    font-size: 2.5vh;
+    font-size: 1.5em;
 }
 
 #contrakanmpbar {
@@ -216,7 +216,7 @@ main {
 #rakanmptext {
     height: 25%;
     margin-left: 4%;
-    font-size: 2.5vh;
+    font-size: 1.5em;
 }
 
 nav {
@@ -292,22 +292,22 @@ nav {
 
 #menuXayah>div>p,
 #items>div>div>pre {
-    font-size: 2.5vh;
+    font-size: 1.5em;
 }
 
 #skills>div>div>div>pre {
-    font-size: 2.2vh;
+    font-size: 1.2em;
     text-shadow: 0px 0px 0.1vh grey;
 }
 
 #items>div>div>p {
-    font-size: 2.2vh;
+    font-size: 1em;
     color: whitesmoke;
     text-shadow: 0px 0px 0.1vh black;
 }
 
 #skills>div>div>div>p {
-    font-size: 1.6vh;
+    font-size: 0.7em;
     color: whitesmoke;
     text-shadow: 0px 0px 0.1vh black;
 }

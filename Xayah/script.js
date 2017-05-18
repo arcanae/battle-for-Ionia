@@ -74,15 +74,20 @@ function bladeCall(use, take) {
 }
 
 function featherStorm(use, take) {
-    if (use.mp < 70) {
+    if (use.mp < 60) {
         alert("Not Enough Mana");
         manaPot(xayah);
     } else {
-        use.mp -= 70;
+        use.mp -= 60;
         take.hp -= 55;
+        use.hp += 15;
 
         if (take.hp < 0) {
             take.hp = 0;
+        }
+
+        if (use.hp > 100) {
+            use.hp = 100;
         }
     }
 }
@@ -93,7 +98,7 @@ function gleamingQuill(use, take) {
     if (use.mp < 20) {
         enemyAtk(use, take);
     } else {
-        console.log("Rakan use Gleaming Quill");
+        alert("Rakan use Gleaming Quill");
         use.mp -= 20;
         take.hp -= 10;
         use.hp += 20;
@@ -113,7 +118,7 @@ function grandEntrance(use, take) {
     if (use.mp < 25) {
         enemyAtk(use, take);
     } else {
-        console.log("Rakan use Grand Entrance")
+        alert("Rakan use Grand Entrance");
         use.mp -= 25;
         take.hp -= 30;
 
@@ -128,6 +133,7 @@ function battleDance(use, take) {
     if (use.mp < 35) {
         enemyAtk(use, take);
     } else {
+        alert("Rakan use Battle Dance");
         use.mp -= 35;
         use.hp += 45;
 
@@ -142,6 +148,7 @@ function quickness(use, take) {
     if (use.mp < 70) {
         enemyAtk(use, take);
     } else {
+        alert("Rakan use The Quickness");
         use.mp -= 70;
         take.hp -= 35;
         use.hp += 35;
@@ -178,7 +185,7 @@ function enemyAtk(use, take) {
 
     if (rakan.mp < 35) {
         manaPot(rakan);
-        console.log("Rakan use mana potion");
+        alert("Rakan use mana potion");
     } else {
         array[rand](use, take);
     }
@@ -227,9 +234,7 @@ function gameEnd() {
         defeat.addEventListener("click", function() {
             location.href = "../index.html";
         });
-    }
-
-    if (rakan.hp == 0) {
+    } else if (rakan.hp == 0) {
         let victory = document.querySelector("#victory");
         victory.style.display = "block";
         victory.style.animationName = "victory";
@@ -250,10 +255,12 @@ function turn(one, two) {
     hide();
     display();
     gameEnd();
-    enemyAtk(two, one);
-    regenMana();
-    display();
-    gameEnd();
+    if (one.hp == 0 || two.hp == 0) {} else {
+        enemyAtk(two, one);
+        regenMana();
+        display();
+        gameEnd();
+    }
 }
 // Event
 
