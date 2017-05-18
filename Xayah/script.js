@@ -26,11 +26,18 @@ function manaPot(use) {
 
 // Xayah's skills
 
+let logs = document.querySelector("#logs");
+logs.textContent += "\n~~~"
+
 function doubleDagger(use, take) {
     if (use.mp < 20) {
         alert("Not Enough Mana");
         manaPot(xayah);
+        logs.textContent += "\nXayah use Mana Potion  MP+30";
+        logs.scrollTop = logs.scrollHeight;
     } else {
+        logs.textContent += "\nXayah use Double Dagger -20/+10     20";
+        logs.scrollTop = logs.scrollHeight;
         use.mp -= 20;
         take.hp -= 20;
         use.hp += 10;
@@ -49,7 +56,11 @@ function livingPlumage(use, take) {
     if (use.mp < 30) {
         alert("Not Enough Mana");
         manaPot(xayah);
+        logs.textContent += "\nXayah use Mana Potion  MP+30";
+        logs.scrollTop = logs.scrollHeight;
     } else {
+        logs.textContent += "\nXayah use Living Plumage -0/+35     30";
+        logs.scrollTop = logs.scrollHeight;
         use.mp -= 30;
         use.hp += 35;
 
@@ -63,7 +74,11 @@ function bladeCall(use, take) {
     if (use.mp < 30) {
         alert("Not Enough Mana");
         manaPot(xayah);
+        logs.textContent += "\nXayah use Mana Potion  MP+30";
+        logs.scrollTop = logs.scrollHeight;
     } else {
+        logs.textContent += "\nXayah use Bladecaller -35/+0        30";
+        logs.scrollTop = logs.scrollHeight;
         use.mp -= 30;
         take.hp -= 35;
 
@@ -77,7 +92,11 @@ function featherStorm(use, take) {
     if (use.mp < 60) {
         alert("Not Enough Mana");
         manaPot(xayah);
+        logs.textContent += "\nXayah use Mana Potion  MP+30";
+        logs.scrollTop = logs.scrollHeight;
     } else {
+        logs.textContent += "\nXayah use Featherstorm -55/+15      60";
+        logs.scrollTop = logs.scrollHeight;
         use.mp -= 60;
         take.hp -= 55;
         use.hp += 15;
@@ -98,7 +117,8 @@ function gleamingQuill(use, take) {
     if (use.mp < 20) {
         enemyAtk(use, take);
     } else {
-        alert("Rakan use Gleaming Quill");
+        logs.textContent += "\nRakan use Gleaming Quill -10/+20    20";
+        logs.scrollTop = logs.scrollHeight;
         use.mp -= 20;
         take.hp -= 10;
         use.hp += 20;
@@ -118,7 +138,8 @@ function grandEntrance(use, take) {
     if (use.mp < 25) {
         enemyAtk(use, take);
     } else {
-        alert("Rakan use Grand Entrance");
+        logs.textContent += "\nRakan use Grand Entrance -30/+0     25";
+        logs.scrollTop = logs.scrollHeight;
         use.mp -= 25;
         take.hp -= 30;
 
@@ -133,7 +154,8 @@ function battleDance(use, take) {
     if (use.mp < 35) {
         enemyAtk(use, take);
     } else {
-        alert("Rakan use Battle Dance");
+        logs.textContent += "\nRakan use Battle Dance -0/+45       35";
+        logs.scrollTop = logs.scrollHeight;
         use.mp -= 35;
         use.hp += 45;
 
@@ -148,7 +170,8 @@ function quickness(use, take) {
     if (use.mp < 70) {
         enemyAtk(use, take);
     } else {
-        alert("Rakan use The Quickness");
+        logs.textContent += "\nRakan use The Quickness -35/+35     70";
+        logs.scrollTop = logs.scrollHeight;
         use.mp -= 70;
         take.hp -= 35;
         use.hp += 35;
@@ -176,16 +199,12 @@ function enemyAtk(use, take) {
         battleDance,
         quickness
     ];
-    let names = ["Gleaming Quill",
-        "Grand Entrance",
-        "Battle Dance",
-        "The Quickness"
-    ];
     let rand = getRandomInt(0, 4);
 
     if (rakan.mp < 35) {
         manaPot(rakan);
-        alert("Rakan use mana potion");
+        logs.textContent += "\nRakan use Mana Potion  MP+30";
+        logs.scrollTop = logs.scrollHeight;
     } else {
         array[rand](use, take);
     }
@@ -257,6 +276,8 @@ function turn(one, two) {
     gameEnd();
     if (one.hp == 0 || two.hp == 0) {} else {
         enemyAtk(two, one);
+        logs.textContent += "\n~~~";
+        logs.scrollTop = logs.scrollHeight;
         regenMana();
         display();
         gameEnd();
@@ -289,12 +310,16 @@ document.body.addEventListener("keypress", function() {
 let itemhp = document.querySelector("#itemhp");
 itemhp.addEventListener("click", function() {
     healthPot(xayah);
+    logs.textContent += "\nXayah use Health Potion  HP+30";
+    logs.scrollTop = logs.scrollHeight;
     turn(xayah, rakan);
 });
 
 let itemmp = document.querySelector("#itemmp");
 itemmp.addEventListener("click", function() {
     manaPot(xayah);
+    logs.textContent += "\nXayah use Mana Potion  MP+30";
+    logs.scrollTop = logs.scrollHeight;
     turn(xayah, rakan);
 });
 

@@ -81,7 +81,7 @@ main {
 }
 
 #xayah {
-    height: 20vh;
+    height: 70%;
     margin-left: 6%;
     /*position: absolute;
     top: 57vh;
@@ -108,6 +108,17 @@ main {
     /*position: absolute;
     top: 23.5vh;
     left: 54vw;*/
+}
+
+#logs {
+    width: 55%;
+    height: 60%;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 0.9em;
+    resize: none;
+    overflow: hidden;
 }
 
 #hpxayah {
