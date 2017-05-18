@@ -12,7 +12,7 @@ body {
     background-image: url("../img/xayah-rakan.jpg");
     background-position: center;
     background-size: 100%;
-    background-color: rgb(155, 13, 73);
+    background-color: rgb(39, 5, 29);
     background-repeat: no-repeat;
 }
 
@@ -30,7 +30,23 @@ main {
     flex-wrap: wrap;
     border: 2px solid black;
     box-sizing: border-box;
-    overflow
+}
+
+#victory,
+#defeat {
+    height: 100%;
+    position: fixed;
+    display: none;
+    animation-duration: 2.5s;
+}
+
+@keyframes victory {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 #topleft {
@@ -208,12 +224,6 @@ nav {
     height: 60%;
 }
 
-nav>ul {
-    width: 100%;
-    height: 100%;
-    padding-left: 0;
-}
-
 #skills1>div,
 #skills2>div,
 #items>div {
@@ -304,7 +314,9 @@ nav>ul {
 
 #menuXayah>div:hover,
 #skills>div>div>div:hover,
-#items>div:hover {
+#items>div:hover,
+#victory,
+#defeat {
     cursor: pointer;
 }
 

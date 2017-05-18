@@ -199,11 +199,21 @@ function display() {
 
 function gameEnd() {
     if (xayah.hp == 0) {
-        alert("Defeat");
+        let defeat = document.querySelector("#defeat");
+        defeat.style.display = "block";
+        defeat.style.animationName = "victory";
+        defeat.addEventListener("click", function() {
+            location.href = "../index.html";
+        });
     }
 
     if (rakan.hp == 0) {
-        alert("Victory");
+        let victory = document.querySelector("#victory");
+        victory.style.display = "block";
+        victory.style.animationName = "victory";
+        victory.addEventListener("click", function() {
+            location.href = "../index.html";
+        });
     }
 }
 
