@@ -181,19 +181,13 @@ menuXayah1.addEventListener("click", function() {
     skills.style.display = "flex";
 });
 
-let skills = document.querySelector("#skills");
-let bulean1 = false;
-skills.addEventListener("mouseover", function() {
-    bulean1 = true;
-});
-skills.addEventListener("mouseout", function() {
-    bulean1 = false;
-});
-skills.addEventListener("keypress", function() {
-    if (event.key == "a" && bulean1 == true) {
+
+document.body.addEventListener("keypress", function() {
+    if (event.keyCode == "32") {
         let menu = document.querySelector("#menuXayah");
         menu.style.display = "flex";
         skills.style.display = "none";
+        items.style.display = "none";
     }
 });
 
