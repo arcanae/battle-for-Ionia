@@ -1,26 +1,50 @@
 * {
     margin: 0;
+    padding: 0;
 }
 
 body {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     height: 100vh;
     width: 100vw;
     background-image: url("../img/xayah-rakan-reverse.jpg");
     background-position: center;
     background-size: 100%;
+    background-color: rgb(39, 5, 29);
     background-repeat: no-repeat;
 }
 
 main {
     background-image: url("../img/gameback.jpg");
     background-size: 100%;
-    height: 57%;
-    width: 57%;
+    background-repeat: no-repeat;
+    height: 414.3px;
+    width: 750px;
+    min-height: 414.3px;
+    min-width: 750px;
     display: flex;
     flex-wrap: wrap;
+    border: 2px solid black;
+    box-sizing: border-box;
+}
+
+#victory,
+#defeat {
+    height: 100%;
+    position: fixed;
+    display: none;
+    animation-duration: 2.5s;
+}
+
+@keyframes victory {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 #topleft {
@@ -55,7 +79,7 @@ main {
 }
 
 #xayah {
-    height: 20vh;
+    height: 70%;
     margin: 5% 10% 0 0;
     /*position: absolute;
     top: 57vh;
@@ -63,8 +87,8 @@ main {
 }
 
 #rakan {
-    margin-left: 9%;
     height: 70%;
+    margin-left: 9%;
     /*position: absolute;
     top: 25vh;
     left: 61vw;*/
@@ -84,10 +108,22 @@ main {
     left: 54vw;*/
 }
 
-#hpxayah {
+#logs {
+    width: 55%;
+    height: 60%;
     background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 0.9em;
+    resize: none;
+    overflow: hidden;
+}
+
+#hpxayah {
+    background-color: rgba(155, 13, 73, 0.4);
     width: 45%;
     height: 50%;
+    box-shadow: inset 0.2vh -0.2vh black;
 }
 
 #contxayahhpbar {
@@ -105,14 +141,14 @@ main {
 
 #contxayahhpbar>.black,
 #contxayahmpbar>.black {
-    margin-right: 2%;
+    margin-left: 2%;
     display: flex;
     justify-content: flex-end;
 }
 
 #contrakanhpbar>.black,
 #contrakanmpbar>.black {
-    margin-left: 2%;
+    margin-right: 2%;
 }
 
 #xayahhpbar {
@@ -124,6 +160,7 @@ main {
 #xayahhptext {
     height: 25%;
     margin-left: 4%;
+    font-size: 1.5em;
 }
 
 #contxayahmpbar {
@@ -142,11 +179,15 @@ main {
 #xayahmptext {
     height: 25%;
     margin-left: 4%;
+    font-size: 1.5em;
+    ;
 }
 
 #hprakan {
     width: 45%;
     height: 50%;
+    background-color: rgba(158, 58, 60, 0.5);
+    box-shadow: inset 0 0.2vh black;
 }
 
 #contrakanhpbar {
@@ -163,8 +204,9 @@ main {
 
 #rakanhptext {
     height: 25%;
-    text-align: end;
     margin-right: 4%;
+    text-align: end;
+    font-size: 1.5em;
 }
 
 #contrakanmpbar {
@@ -181,53 +223,167 @@ main {
 
 #rakanmptext {
     height: 25%;
-    text-align: end;
     margin-right: 4%;
+    text-align: end;
+    font-size: 1.5em;
 }
 
 nav {
-    background-color: grey;
     width: 55%;
     height: 60%;
 }
 
-nav>ul {
-    width: 100%;
+#skills1>div,
+#skills2>div,
+#items>div {
+    display: flex;
+    flex-wrap: wrap;
     height: 100%;
-    padding-left: 0;
+    width: 50%;
 }
 
-#menuRakan,
+.skilltext {
+    height: 65%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.skillef {
+    height: 35%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.itemstext {
+    height: 65%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.itemsef {
+    height: 35%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#menuXayah {
+    background-image: url("../img/Rakan.0.png");
+    background-size: 100%;
+    color: orange;
+    text-shadow: 0vh 0vh 0.1vh black;
+    box-shadow: inset 0.1vh 0.1vh 0.1vh black;
+}
+
+#menuXayah,
 #items {
     display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+
+#menuXayah>div {
+    display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
 }
 
-nav>ul>li,
-#skills>div>li {
-    list-style: none;
-    font-size: 2.5vh;
+#menuXayah>div>p,
+#items>div>div>pre {
+    font-size: 1.5em;
 }
 
-nav>ul>li:hover,
-#skills>div>li:hover {
+#skills>div>div>div>pre {
+    font-size: 1.2em;
+    text-shadow: 0px 0px 0.1vh grey;
+}
+
+#items>div>div>p {
+    font-size: 1em;
+    color: whitesmoke;
+    text-shadow: 0px 0px 0.1vh black;
+}
+
+#skills>div>div>div>p {
+    font-size: 0.7em;
+    color: whitesmoke;
+    text-shadow: 0px 0px 0.1vh black;
+}
+
+#menuXayah>div:hover,
+#skills>div>div>div:hover,
+#items>div:hover,
+#victory,
+#defeat {
     cursor: pointer;
 }
 
 #skills {
     display: none;
-    flex-direction: column;
+    height: 100%;
+    flex-wrap: wrap;
 }
 
 #skills>div {
     width: 100%;
-    height: 50%;
+    height: 48.5%;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    flex-wrap: nowrap;
+}
+
+#items>div {
+    box-shadow: inset 0.1vh 0.1vh 0.1vh black;
+}
+
+.border {
+    border: 0.1vh solid black;
+}
+
+#border1 {
+    border-bottom: 0.2vh solid black;
+    background-image: url("../img/stripe_orange.png");
+    background-size: 20%;
+}
+
+#border2 {
+    border-bottom: 0.2vh solid black;
+    background-image: url("../img/stripe_orange.png");
+    background-size: 20%;
+}
+
+#border3 {
+    border-top: 0.15vh solid black;
+    background-image: url("../img/stripe_green.png");
+    background-size: 20%;
+}
+
+#border4 {
+    border-top: 0.15vh solid black;
+    background-image: url("../img/stripe_pink.png");
+    background-size: 20%;
 }
 
 #items {
     display: none;
+}
+
+#itemhp {
+    background-image: url("../img/stripe_green.png");
+    background-size: 20%;
+}
+
+#itemmp {
+    background-image: url("../img/stripe_blue.png");
+    background-size: 20%;
 }

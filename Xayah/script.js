@@ -130,7 +130,6 @@ function gleamingQuill(use, take) {
         if (use.hp > 100) {
             use.hp = 100;
         }
-        display();
     }
 }
 
@@ -146,7 +145,6 @@ function grandEntrance(use, take) {
         if (take.hp < 0) {
             take.hp = 0;
         }
-        display();
     }
 }
 
@@ -162,7 +160,6 @@ function battleDance(use, take) {
         if (use.hp > 100) {
             use.hp = 100;
         }
-        display();
     }
 }
 
@@ -183,7 +180,6 @@ function quickness(use, take) {
         if (use.hp > 100) {
             use.hp = 100;
         }
-        display()
     }
 }
 

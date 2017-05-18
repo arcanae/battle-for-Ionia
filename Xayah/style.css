@@ -24,8 +24,6 @@ main {
     width: 750px;
     min-height: 414.3px;
     min-width: 750px;
-    /*margin: auto;
-    margin-top: calc(50vh - (414.3px / 2));*/
     display: flex;
     flex-wrap: wrap;
     border: 2px solid black;
@@ -125,7 +123,7 @@ main {
     background-color: rgba(155, 13, 73, 0.4);
     width: 45%;
     height: 50%;
-    box-shadow: inset 0vh 0.2vh black;
+    box-shadow: inset 0 0.2vh black;
 }
 
 #contxayahhpbar {

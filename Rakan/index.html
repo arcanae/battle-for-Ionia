@@ -5,71 +5,125 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Xayah & Rakan</title>
+    <title>Battle for Ionia</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+    <img id="victory" src="../img/victory.png" alt="victory">
+    <img id="defeat" src="../img/defeat.png" alt="defeat">
     <main>
-        <article id="topleft">
+        <article class="maincontent" id="topleft">
+            <textarea name="logs" id="logs">Here are the logs !</textarea>
             <div id="hpxayah">
                 <div id="contxayahhpbar">
-                    <div class="black">
+                    <div class="black border">
                         <div id="xayahhpbar"></div>
                     </div>
                 </div>
                 <p id="xayahhptext">HP: 100 / 100</p>
                 <div id="contxayahmpbar">
-                    <div class="black">
+                    <div class="black border">
                         <div id="xayahmpbar"></div>
                     </div>
                 </div>
                 <p id="xayahmptext">MP: 100 / 100</p>
             </div>
         </article>
-        <article id="topright">
+        <article class="maincontent" id="topright">
             <img id="xayahpic" src="../img/xayahpic.jpg" alt="xayahpic">
             <img id="xayah" src="../img/xayah.png" alt="xayah">
         </article>
-        <article id="botleft">
+        <article class="maincontent" id="botleft">
             <img id="rakan" src="../img/rakan.png" alt="rakan">
             <img id="rakanpic" src="../img/rakanpic.png" alt="rakanpic">
         </article>
-        <article id="botright">
+        <article class="maincontent" id="botright">
             <div id="hprakan">
                 <div id="contrakanhpbar">
-                    <div class="black">
+                    <div class="black border">
                         <div id="rakanhpbar"></div>
                     </div>
                 </div>
                 <p id="rakanhptext">HP: 100 / 100</p>
                 <div id="contrakanmpbar">
-                    <div class="black">
+                    <div class="black border">
                         <div id="rakanmpbar"></div>
                     </div>
                 </div>
                 <p id="rakanmptext">MP: 100 / 100</p>
             </div>
             <nav>
-                <ul id="menuRakan">
-                    <li id="menuRakan1">Skills</li>
-                    <li id="menuRakan2">Items</li>
-                </ul>
-                <ul id="skills">
+                <div id="menuXayah">
+                    <div id="menuXayah1">
+                        <p>Skills</p>
+                    </div>
+                    <div id="menuXayah2">
+                        <p>Items</p>
+                    </div>
+                </div>
+                <div id="skills">
                     <div id="skills1">
-                        <li>Gleaming Quill</li>
-                        <li>Grand Entrance</li>
+                        <div id="border1" class="border">
+                            <div class="skilltext">
+                                <pre>Gleaming Quill</pre>
+                            </div>
+                            <div class="skillef">
+                                <p>DMG: 10</p>
+                                <p>Heal: 20</p>
+                                <p>Cost: 20</p>
+                            </div>
+                        </div>
+                        <div id="border2" class="border">
+                            <div class="skilltext">
+                                <pre>Grand Entrance</pre>
+                            </div>
+                            <div class="skillef">
+                                <p>DMG: 35</p>
+                                <p>Cost: 25</p>
+                            </div>
+                        </div>
                     </div>
                     <div id="skills2">
-                        <li>Battle Dance</li>
-                        <li>The Quickness</li>
+                        <div id="border3" class="border">
+                            <div class="skilltext">
+                                <pre>Battle Dance</pre>
+                            </div>
+                            <div class="skillef">
+                                <p>Heal: 45</p>
+                                <p>Cost: 35</p>
+                            </div>
+                        </div>
+                        <div id="border4" class="border">
+                            <div class="skilltext">
+                                <pre>The Quickness</pre>
+                            </div>
+                            <div class="skillef">
+                                <p>DMG: 35</p>
+                                <p>Heal: 35</p>
+                                <p>Cost: 60</p>
+                            </div>
+                        </div>
                     </div>
-                </ul>
-                <ul id="items">
-                    <li>Health Potion</li>
-                    <li>Mana Potion</li>
-                </ul>
-
+                </div>
+                <div id="items">
+                    <div id="itemhp">
+                        <div class="itemstext">
+                            <pre>Health</br>Potion</pre>
+                        </div>
+                        <div class="itemsef">
+                            <p>Health +30</p>
+                        </div>
+                    </div>
+                    <div id="itemmp">
+                        <div class="itemstext">
+                            <pre>Mana</br>Potion</pre>
+                        </div>
+                        <div class="itemsef">
+                            <p>Mana +30</p>
+                        </div>
+                    </div>
+                </div>
             </nav>
         </article>
     </main>
