@@ -29,6 +29,7 @@ function manaPot(use) {
 function doubleDagger(use, take) {
     if (use.mp < 20) {
         alert("Not Enough Mana");
+        manaPot(xayah);
     } else {
         use.mp -= 20;
         take.hp -= 20;
@@ -41,15 +42,13 @@ function doubleDagger(use, take) {
         if (use.hp > 100) {
             use.hp = 100;
         }
-        display();
-        hide();
     }
 }
 
 function livingPlumage(use, take) {
     if (use.mp < 30) {
         alert("Not Enough Mana");
-        use.mp -= 10;
+        manaPot(xayah);
     } else {
         use.mp -= 30;
         use.hp += 35;
@@ -57,14 +56,13 @@ function livingPlumage(use, take) {
         if (use.hp > 100) {
             use.hp = 100;
         }
-        display();
-        hide();
     }
 }
 
 function bladeCall(use, take) {
     if (use.mp < 30) {
         alert("Not Enough Mana");
+        manaPot(xayah);
     } else {
         use.mp -= 30;
         take.hp -= 35;
@@ -72,14 +70,13 @@ function bladeCall(use, take) {
         if (take.hp < 0) {
             take.hp = 0;
         }
-        display();
-        hide();
     }
 }
 
 function featherStorm(use, take) {
     if (use.mp < 70) {
         alert("Not Enough Mana");
+        manaPot(xayah);
     } else {
         use.mp -= 70;
         take.hp -= 55;
@@ -87,8 +84,6 @@ function featherStorm(use, take) {
         if (take.hp < 0) {
             take.hp = 0;
         }
-        display();
-        hide();
     }
 }
 
@@ -96,8 +91,9 @@ function featherStorm(use, take) {
 
 function gleamingQuill(use, take) {
     if (use.mp < 20) {
-        alert("Not Enough Mana");
+        enemyAtk(use, take);
     } else {
+        console.log("Rakan use Gleaming Quill");
         use.mp -= 20;
         take.hp -= 10;
         use.hp += 20;
@@ -110,14 +106,14 @@ function gleamingQuill(use, take) {
             use.hp = 100;
         }
         display();
-        hide();
     }
 }
 
 function grandEntrance(use, take) {
     if (use.mp < 25) {
-        alert("Not Enough Mana");
+        enemyAtk(use, take);
     } else {
+        console.log("Rakan use Grand Entrance")
         use.mp -= 25;
         take.hp -= 30;
 
@@ -125,13 +121,12 @@ function grandEntrance(use, take) {
             take.hp = 0;
         }
         display();
-        hide();
     }
 }
 
 function battleDance(use, take) {
     if (use.mp < 35) {
-        alert("Not Enough Mana");
+        enemyAtk(use, take);
     } else {
         use.mp -= 35;
         use.hp += 45;
@@ -140,13 +135,12 @@ function battleDance(use, take) {
             use.hp = 100;
         }
         display();
-        hide();
     }
 }
 
 function quickness(use, take) {
     if (use.mp < 70) {
-        alert("Not Enough Mana");
+        enemyAtk(use, take);
     } else {
         use.mp -= 70;
         take.hp -= 35;
@@ -159,8 +153,46 @@ function quickness(use, take) {
         if (use.hp > 100) {
             use.hp = 100;
         }
-        display();
-        hide();
+        display()
+    }
+}
+
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+
+function enemyAtk(use, take) {
+    let array = [gleamingQuill,
+        grandEntrance,
+        battleDance,
+        quickness
+    ];
+    let names = ["Gleaming Quill",
+        "Grand Entrance",
+        "Battle Dance",
+        "The Quickness"
+    ];
+    let rand = getRandomInt(0, 4);
+
+    if (rakan.mp < 35) {
+        manaPot(rakan);
+        console.log("Rakan use mana potion");
+    } else {
+        array[rand](use, take);
+    }
+}
+
+function regenMana() {
+    rakan.mp += 10;
+    xayah.mp += 10;
+
+    if (rakan.mp > 100) {
+        rakan.mp = 100;
+    }
+    if (xayah.mp > 100) {
+        xayah.mp = 100;
     }
 }
 
@@ -175,16 +207,6 @@ function display() {
     let xayahMpbar = document.querySelector("#xayahmpbar");
     let rakanHpbar = document.querySelector("#rakanhpbar");
     let rakanMpbar = document.querySelector("#rakanmpbar");
-
-    rakan.mp += 10;
-    xayah.mp += 10;
-
-    if (rakan.mp > 100) {
-        rakan.mp = 100;
-    }
-    if (xayah.mp > 100) {
-        xayah.mp = 100;
-    }
 
     xayahHpbar.style.width = xayah.hp + "%";
     xayahMpbar.style.width = xayah.mp + "%";
@@ -224,6 +246,15 @@ function hide() {
     items.style.display = "none";
 }
 
+function turn(one, two) {
+    hide();
+    display();
+    gameEnd();
+    enemyAtk(two, one);
+    regenMana();
+    display();
+    gameEnd();
+}
 // Event
 
 let menuXayah1 = document.querySelector("#menuXayah1");
@@ -251,37 +282,35 @@ document.body.addEventListener("keypress", function() {
 let itemhp = document.querySelector("#itemhp");
 itemhp.addEventListener("click", function() {
     healthPot(xayah);
-    display();
-    hide();
+    turn(xayah, rakan);
 });
 
 let itemmp = document.querySelector("#itemmp");
 itemmp.addEventListener("click", function() {
     manaPot(xayah);
-    display();
-    hide();
+    turn(xayah, rakan);
 });
 
 let skill1 = document.querySelector("#border1");
 skill1.addEventListener("click", function() {
     doubleDagger(xayah, rakan);
-    gameEnd();
+    turn(xayah, rakan);
 });
 
 let skill2 = document.querySelector("#border2");
 skill2.addEventListener("click", function() {
     livingPlumage(xayah, rakan);
-    gameEnd();
+    turn(xayah, rakan);
 });
 
 let skill3 = document.querySelector("#border3");
 skill3.addEventListener("click", function() {
     bladeCall(xayah, rakan);
-    gameEnd();
+    turn(xayah, rakan);
 });
 
 let skill4 = document.querySelector("#border4");
 skill4.addEventListener("click", function() {
     featherStorm(xayah, rakan);
-    gameEnd();
+    turn(xayah, rakan);
 });
