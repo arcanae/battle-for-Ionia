@@ -296,7 +296,7 @@ menuXayah2.addEventListener("click", function() {
     items.style.display = "flex";
 });
 
-document.body.addEventListener("keypress", function(event) {
+document.body.addEventListener("keydown", function(event) {
     if (event.keyCode == 32) {
         hide();
     }
