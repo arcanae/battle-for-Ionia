@@ -30,7 +30,7 @@ function gleamingQuill(use, take) {
     if (use.mp < 20) {
         alert("Not Enough Mana");
         manaPot(rakan);
-        logs.textContent += "\nRakan use Mana Potion  MP+30";
+        logs.textContent += "\nRakan use Mana Potion  MP+25";
         logs.scrollTop = logs.scrollHeight;
     } else {
         logs.textContent += "\nRakan use Gleaming Quill -10/+20    20";
@@ -53,7 +53,7 @@ function grandEntrance(use, take) {
     if (use.mp < 25) {
         alert("Not Enough Mana");
         manaPot(rakan);
-        logs.textContent += "\nRakan use Mana Potion  MP+30";
+        logs.textContent += "\nRakan use Mana Potion  MP+25";
         logs.scrollTop = logs.scrollHeight;
     } else {
         logs.textContent += "\nRakan use Grand Entrance -30/+0     25";
@@ -71,7 +71,7 @@ function battleDance(use, take) {
     if (use.mp < 35) {
         alert("Not Enough Mana");
         manaPot(rakan);
-        logs.textContent += "\nRakan use Mana Potion  MP+30";
+        logs.textContent += "\nRakan use Mana Potion  MP+25";
         logs.scrollTop = logs.scrollHeight;
     } else {
         logs.textContent += "\nRakan use Battle Dance -0/+45       35";
@@ -89,7 +89,7 @@ function quickness(use, take) {
     if (use.mp < 60) {
         alert("Not Enough Mana");
         manaPot(rakan);
-        logs.textContent += "\nRakan use Mana Potion  MP+30";
+        logs.textContent += "\nRakan use Mana Potion  MP+25";
         logs.scrollTop = logs.scrollHeight;
     } else {
         logs.textContent += "\nRakan use The Quickness -35/+35     60";
@@ -198,7 +198,7 @@ function enemyAtk(use, take) {
 
     if (xayah.mp < 35) {
         manaPot(xayah);
-        logs.textContent += "\nXayah use Mana Potion  MP+30";
+        logs.textContent += "\nXayah use Mana Potion  MP+25";
         logs.scrollTop = logs.scrollHeight;
     } else {
         array[rand](use, take);
@@ -313,7 +313,7 @@ itemhp.addEventListener("click", function() {
 let itemmp = document.querySelector("#itemmp");
 itemmp.addEventListener("click", function() {
     manaPot(rakan);
-    logs.textContent += "\nRakan use Mana Potion  MP+30";
+    logs.textContent += "\nRakan use Mana Potion  MP+25";
     logs.scrollTop = logs.scrollHeight;
     turn(rakan, xayah);
 });

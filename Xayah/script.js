@@ -33,7 +33,7 @@ function doubleDagger(use, take) {
     if (use.mp < 20) {
         alert("Not Enough Mana");
         manaPot(xayah);
-        logs.textContent += "\nXayah use Mana Potion  MP+30";
+        logs.textContent += "\nXayah use Mana Potion  MP+25";
         logs.scrollTop = logs.scrollHeight;
     } else {
         logs.textContent += "\nXayah use Double Dagger -20/+10     20";
@@ -56,7 +56,7 @@ function livingPlumage(use, take) {
     if (use.mp < 30) {
         alert("Not Enough Mana");
         manaPot(xayah);
-        logs.textContent += "\nXayah use Mana Potion  MP+30";
+        logs.textContent += "\nXayah use Mana Potion  MP+25";
         logs.scrollTop = logs.scrollHeight;
     } else {
         logs.textContent += "\nXayah use Living Plumage -0/+35     30";
@@ -74,7 +74,7 @@ function bladeCall(use, take) {
     if (use.mp < 30) {
         alert("Not Enough Mana");
         manaPot(xayah);
-        logs.textContent += "\nXayah use Mana Potion  MP+30";
+        logs.textContent += "\nXayah use Mana Potion  MP+25";
         logs.scrollTop = logs.scrollHeight;
     } else {
         logs.textContent += "\nXayah use Bladecaller -35/+0        30";
@@ -92,7 +92,7 @@ function featherStorm(use, take) {
     if (use.mp < 60) {
         alert("Not Enough Mana");
         manaPot(xayah);
-        logs.textContent += "\nXayah use Mana Potion  MP+30";
+        logs.textContent += "\nXayah use Mana Potion  MP+25";
         logs.scrollTop = logs.scrollHeight;
     } else {
         logs.textContent += "\nXayah use Featherstorm -55/+15      60";
@@ -199,7 +199,7 @@ function enemyAtk(use, take) {
 
     if (rakan.mp < 35) {
         manaPot(rakan);
-        logs.textContent += "\nRakan use Mana Potion  MP+30";
+        logs.textContent += "\nRakan use Mana Potion  MP+25";
         logs.scrollTop = logs.scrollHeight;
     } else {
         array[rand](use, take);
@@ -314,7 +314,7 @@ itemhp.addEventListener("click", function() {
 let itemmp = document.querySelector("#itemmp");
 itemmp.addEventListener("click", function() {
     manaPot(xayah);
-    logs.textContent += "\nXayah use Mana Potion  MP+30";
+    logs.textContent += "\nXayah use Mana Potion  MP+25";
     logs.scrollTop = logs.scrollHeight;
     turn(xayah, rakan);
 });
