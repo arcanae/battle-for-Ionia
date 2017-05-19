@@ -31,7 +31,7 @@ logs.textContent += "\nThere is a 10MP regen at the end of each turn.\nUse \"Spa
 
 function doubleDagger(use, take) {
     if (use.mp < 20) {
-        alert("Not Enough Mana");
+        alert("Not Enough Mana.\nYou drink a Mana Potion.");
         manaPot(xayah);
         logs.textContent += "\nXayah use Mana Potion  MP+25";
         logs.scrollTop = logs.scrollHeight;
@@ -54,7 +54,7 @@ function doubleDagger(use, take) {
 
 function livingPlumage(use, take) {
     if (use.mp < 30) {
-        alert("Not Enough Mana");
+        alert("Not Enough Mana.\nYou drink a Mana Potion.");
         manaPot(xayah);
         logs.textContent += "\nXayah use Mana Potion  MP+25";
         logs.scrollTop = logs.scrollHeight;
@@ -72,7 +72,7 @@ function livingPlumage(use, take) {
 
 function bladeCall(use, take) {
     if (use.mp < 30) {
-        alert("Not Enough Mana");
+        alert("Not Enough Mana.\nYou drink a Mana Potion.");
         manaPot(xayah);
         logs.textContent += "\nXayah use Mana Potion  MP+25";
         logs.scrollTop = logs.scrollHeight;
@@ -90,7 +90,7 @@ function bladeCall(use, take) {
 
 function featherStorm(use, take) {
     if (use.mp < 60) {
-        alert("Not Enough Mana");
+        alert("Not Enough Mana.\nYou drink a Mana Potion.");
         manaPot(xayah);
         logs.textContent += "\nXayah use Mana Potion  MP+25";
         logs.scrollTop = logs.scrollHeight;

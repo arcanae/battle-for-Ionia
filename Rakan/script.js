@@ -28,7 +28,7 @@ function manaPot(use) {
 
 function gleamingQuill(use, take) {
     if (use.mp < 20) {
-        alert("Not Enough Mana");
+        alert("Not Enough Mana.\nYou drink a Mana Potion.");
         manaPot(rakan);
         logs.textContent += "\nRakan use Mana Potion  MP+25";
         logs.scrollTop = logs.scrollHeight;
@@ -51,7 +51,7 @@ function gleamingQuill(use, take) {
 
 function grandEntrance(use, take) {
     if (use.mp < 25) {
-        alert("Not Enough Mana");
+        alert("Not Enough Mana.\nYou drink a Mana Potion.");
         manaPot(rakan);
         logs.textContent += "\nRakan use Mana Potion  MP+25";
         logs.scrollTop = logs.scrollHeight;
@@ -69,7 +69,7 @@ function grandEntrance(use, take) {
 
 function battleDance(use, take) {
     if (use.mp < 35) {
-        alert("Not Enough Mana");
+        alert("Not Enough Mana.\nYou drink a Mana Potion.");
         manaPot(rakan);
         logs.textContent += "\nRakan use Mana Potion  MP+25";
         logs.scrollTop = logs.scrollHeight;
@@ -87,7 +87,7 @@ function battleDance(use, take) {
 
 function quickness(use, take) {
     if (use.mp < 60) {
-        alert("Not Enough Mana");
+        alert("Not Enough Mana.\nYou drink a Mana Potion.");
         manaPot(rakan);
         logs.textContent += "\nRakan use Mana Potion  MP+25";
         logs.scrollTop = logs.scrollHeight;
