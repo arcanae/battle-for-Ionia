@@ -243,14 +243,16 @@ function display() {
 function gameEnd() {
     if (rakan.hp == 0) {
         let defeat = document.querySelector("#defeat");
-        defeat.style.display = "block";
+        let imageDefeat = document.querySelector("#imageDefeat");
+        imageDefeat.style.display = "flex";
         defeat.style.animationName = "victory";
         defeat.addEventListener("click", function() {
             location.href = "../index.html";
         });
     } else if (xayah.hp == 0) {
         let victory = document.querySelector("#victory");
-        victory.style.display = "block";
+        let imageVictory = document.querySelector("#imageVictory");
+        imageVictory.style.display = "flex";
         victory.style.animationName = "victory";
         victory.addEventListener("click", function() {
             location.href = "../index.html";
