@@ -4,33 +4,37 @@
 
 body {
     width: 100vw;
-    height: 100%;
+    height: 100vh;
     background-color: black;
     background-repeat: repeat;
-    overflow: hidden;
+}
+
+
+/*<header>*/
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
 }
 
 #charac {
-    position: absolute;
-    top: 5vh;
-    left: 33vw;
     height: 12vh;
 }
 
-#rebel {
-    height: 12vh;
-    position: absolute;
-    top: 31vh;
-    left: 5vw;
-    display: none;
+
+/*<main>*/
+
+main {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 40%;
 }
 
-#charmer {
-    height: 13vh;
-    position: absolute;
-    top: 31.5vh;
-    left: 72.5vw;
-    display: none;
+section {
+    width: 40%;
 }
 
 #xayah-load:hover,
@@ -38,27 +42,53 @@ body {
     cursor: pointer;
 }
 
+
+/*<section id="xayahSelect">*/
+
+#xayahSelect {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#rebel {
+    height: 12vh;
+    display: none;
+    margin-right: 2em;
+}
+
 #xayah-load {
     height: 37vh;
-    position: absolute;
-    top: 20vh;
-    left: 27vw;
+}
+
+
+/*<section id="rakanSelect">*/
+
+#rakanSelect {
+    display: flex;
+    align-items: center;
 }
 
 #rakan-load {
     height: 37vh;
-    position: absolute;
-    top: 20vh;
-    left: 60vw;
+}
+
+#charmer {
+    height: 13vh;
+    display: none;
+    margin-left: 2em;
+}
+
+
+/*<footer>*/
+
+footer {
+    height: 40%;
+    width: 100%;
+    display: flex;
 }
 
 #battle {
-    position: absolute;
-    left: 7vw;
-    top: 60vh;
-    height: 40vh;
-}
-
-main {
-    display: none;
+    height: 100%;
+    margin: auto;
 }
