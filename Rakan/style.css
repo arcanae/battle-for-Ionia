@@ -149,14 +149,14 @@ main {
 
 #contxayahhpbar>.black,
 #contxayahmpbar>.black {
-    margin-left: 2%;
+    margin-right: 2%;
     display: flex;
     justify-content: flex-end;
 }
 
 #contrakanhpbar>.black,
 #contrakanmpbar>.black {
-    margin-right: 2%;
+    margin-left: 2%;
 }
 
 #xayahhpbar {
